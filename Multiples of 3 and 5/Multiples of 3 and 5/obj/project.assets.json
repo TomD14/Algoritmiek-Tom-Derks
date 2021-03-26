@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\td10\\source\\repos\\Multiples of 3 and 5\\Multiples of 3 and 5\\Multiples of 3 and 5.csproj",
+      "projectUniqueName": "C:\\Users\\td10\\Documents\\Algoritmiek-Tom-Derks\\Multiples of 3 and 5\\Multiples of 3 and 5\\Multiples of 3 and 5.csproj",
       "projectName": "Multiples of 3 and 5",
-      "projectPath": "C:\\Users\\td10\\source\\repos\\Multiples of 3 and 5\\Multiples of 3 and 5\\Multiples of 3 and 5.csproj",
+      "projectPath": "C:\\Users\\td10\\Documents\\Algoritmiek-Tom-Derks\\Multiples of 3 and 5\\Multiples of 3 and 5\\Multiples of 3 and 5.csproj",
       "packagesPath": "C:\\Users\\td10\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\td10\\source\\repos\\Multiples of 3 and 5\\Multiples of 3 and 5\\obj\\",
+      "outputPath": "C:\\Users\\td10\\Documents\\Algoritmiek-Tom-Derks\\Multiples of 3 and 5\\Multiples of 3 and 5\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\td10\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -60,7 +60,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.100\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.201\\RuntimeIdentifierGraph.json"
       }
     }
   }
