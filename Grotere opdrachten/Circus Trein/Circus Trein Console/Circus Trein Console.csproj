@@ -4,10 +4,10 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{03E1719C-7BCC-440C-9504-78F93EA3AFCE}</ProjectGuid>
+    <ProjectGuid>{2ADF0E0D-824E-4EDD-931C-839F35DE1C51}</ProjectGuid>
     <OutputType>Exe</OutputType>
-    <RootNamespace>Circus_Trein</RootNamespace>
-    <AssemblyName>Circus Trein</AssemblyName>
+    <RootNamespace>Circus_Trein_Console</RootNamespace>
+    <AssemblyName>Circus Trein Console</AssemblyName>
     <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
@@ -32,9 +32,6 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
-  <PropertyGroup>
-    <StartupObject />
-  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -46,18 +43,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aanmaak.cs" />
-    <Compile Include="Carnivoor.cs" />
-    <Compile Include="Trein.cs" />
-    <Compile Include="Dier.cs" />
-    <Compile Include="Herbivoor.cs" />
-    <Compile Include="IEdible.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wagon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Circus Trein\Circus Trein.csproj">
+      <Project>{03e1719c-7bcc-440c-9504-78f93ea3afce}</Project>
+      <Name>Circus Trein</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
