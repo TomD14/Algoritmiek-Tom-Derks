@@ -4,6 +4,7 @@ Algoritmiek Opdrachten
 Hier mijn Algoritmiek opdrachten die ik heb gemaakt:
 (Indeling per map, met sprint waarin ik hem maakte erboven)
 
+
 Quizvragen:
 hier geef ik geen uitleg omdat dit kleine opgaves zijn
 
