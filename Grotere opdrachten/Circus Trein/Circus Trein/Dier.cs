@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Circus_Trein
 {
-    class Dier : IEdible
+    public class Dier : IEdible
     {
         public Groottes Grootte { get; set; }
         public enum Groottes{Klein,Gemiddeld,Groot};
