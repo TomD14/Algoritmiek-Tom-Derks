@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Circus_Trein
 {
-    class Herbivoor : Dier
+    public class Herbivoor : Dier
     {
         public Herbivoor(Groottes grootte) : base(grootte)
         {

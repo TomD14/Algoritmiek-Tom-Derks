@@ -7,7 +7,7 @@ using Circus_Trein;
 
 namespace Circus_Trein
 {
-    class Carnivoor : Dier
+    public class Carnivoor : Dier
     {
         public Carnivoor(Groottes grootte) : base(grootte)
         {

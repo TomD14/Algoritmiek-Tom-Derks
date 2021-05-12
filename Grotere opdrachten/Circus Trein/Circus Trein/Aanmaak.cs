@@ -7,7 +7,7 @@ using Circus_Trein;
 
 namespace Circus_Trein
 {
-    class Aanmaak
+    public class Aanmaak
     {
 
         public List<Dier> MaakDier(int Aantal, int CarnivoorKans)

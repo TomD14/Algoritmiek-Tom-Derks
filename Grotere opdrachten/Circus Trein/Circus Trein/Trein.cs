@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Circus_Trein
 {
-    class Trein
+    public class Trein
     {
         public List<Dier> Dieren { get; set; } = new List<Dier>();
 

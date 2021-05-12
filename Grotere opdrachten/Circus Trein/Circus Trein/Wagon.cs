@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Circus_Trein
 {
-    class Wagon
+    public class Wagon
     {
         public List<Dier> WagonDieren { get; set; } = new List<Dier>();
 
@@ -26,6 +26,7 @@ namespace Circus_Trein
         {
             Random rand = new Random();
             int i = 0;
+            Vol = false;
 
             while (!Vol)
             {
@@ -37,17 +38,21 @@ namespace Circus_Trein
 
                 Dier dier = dieren[i];
 
-                if (!dier.WordGegeten(WagonDieren) && !dier.EetAnderen(WagonDieren) && TotaalGewicht + dier.Gewicht < MaxGewicht)
+                if (!dier.WordGegeten(WagonDieren) && !dier.EetAnderen(WagonDieren) && TotaalGewicht + dier.Gewicht <= MaxGewicht)
                 {
                     WagonDieren.Add(dier);
                     TotaalGewicht += dier.Gewicht;
                     dieren.Remove(dier);
+                    i = 0;
                 }
                 else if(TotaalGewicht + dier.Gewicht > MaxGewicht && i >= dieren.Count)
                 {
                     Vol = true;
                 }
-                i++;
+                else
+                {
+                    i++;
+                }
             }
 
             Console.WriteLine("	    o			    ");

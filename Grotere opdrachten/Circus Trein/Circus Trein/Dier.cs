@@ -74,7 +74,8 @@ namespace Circus_Trein
             {
                 if (anderDier != this)
                 {
-                    if (anderDier.Dieet == DieetSoorten.Herbivoor && this.Dieet == DieetSoorten.Carnivoor)
+                    if (anderDier.Dieet == DieetSoorten.Herbivoor && this.Dieet == DieetSoorten.Carnivoor ||
+                        anderDier.Dieet == DieetSoorten.Herbivoor && this.Dieet == DieetSoorten.Herbivoor)
                     {
                         return false;
                     }

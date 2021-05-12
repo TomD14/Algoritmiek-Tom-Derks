@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Circus_Trein
 {
-    interface IEdible
+    public interface IEdible
     {
         bool EetAnderen(IEnumerable<Dier> anderDier);
         bool WordGegeten(IEnumerable<Dier> anderDier);
