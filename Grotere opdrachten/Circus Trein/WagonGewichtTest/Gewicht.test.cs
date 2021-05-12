@@ -33,5 +33,8 @@ namespace WagonGewichtTest
 
             Assert.AreEqual(10, wagon.TotaalGewicht);
         }
+
+        [TestMethod]
+        public void 
     }
 }
