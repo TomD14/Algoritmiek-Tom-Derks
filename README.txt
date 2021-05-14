@@ -23,3 +23,6 @@ Grotere Opdrachten:
 
 Sprint 3:
 -Circus Trein is de Circus Trein opdracht van canvas, waar je een trein met wagons moet maken en hierin dieren moet indelen.
+
+Sprint 4: 
+-Circus Trein unit tests, Fatsoenlijk bug loos werkend gemaakt en gesplitst in library en console applicatie.
