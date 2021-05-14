@@ -14,7 +14,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\Circus Trein\Circus Trein.csproj" />
+    <ProjectReference Include="..\ClassLibrary\Circus trein.csproj" />
   </ItemGroup>
 
 </Project>

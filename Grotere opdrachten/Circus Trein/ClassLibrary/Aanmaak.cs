@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Circus_Trein;
 
-namespace Circus_Trein
+
+namespace Circus_trein
 {
     public class Aanmaak
     {
@@ -14,6 +14,7 @@ namespace Circus_Trein
         {
             List<Dier> dieren = new List<Dier>();
             Random rand = new Random();
+            Aantal += -1;
 
             var maximumGrootte = Enum.GetValues(typeof(Dier.Groottes));
 

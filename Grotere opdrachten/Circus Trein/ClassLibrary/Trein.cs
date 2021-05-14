@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Circus_Trein
+namespace Circus_trein
 {
     public class Trein
     {

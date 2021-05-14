@@ -1,11 +1,11 @@
-﻿using System;
+﻿using Circus_trein;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Circus_trein;
 
-namespace Circus_trein
+namespace Circus_Trein.Console
 {
     class Program
     {
@@ -15,8 +15,7 @@ namespace Circus_trein
 
             List<Dier> dieren = aanmaak.MaakDier(20, 3);
             Trein trein = new Trein(dieren, 10);
-
-            Console.ReadLine();
+            System.Console.ReadKey();
         }
     }
 }

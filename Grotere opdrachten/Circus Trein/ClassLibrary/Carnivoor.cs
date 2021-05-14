@@ -3,9 +3,8 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Circus_Trein;
 
-namespace Circus_Trein
+namespace Circus_trein
 {
     public class Carnivoor : Dier
     {

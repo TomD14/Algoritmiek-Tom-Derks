@@ -8,10 +8,11 @@
     <OutputType>Exe</OutputType>
     <RootNamespace>Circus_Trein</RootNamespace>
     <AssemblyName>Circus Trein</AssemblyName>
-    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v3.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -46,18 +47,17 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Aanmaak.cs" />
-    <Compile Include="Carnivoor.cs" />
-    <Compile Include="Trein.cs" />
-    <Compile Include="Dier.cs" />
-    <Compile Include="Herbivoor.cs" />
-    <Compile Include="IEdible.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Wagon.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\Circus trein.csproj">
+      <Project>{dcbae6ff-9ab9-4789-a12e-63fa3955cbe3}</Project>
+      <Name>Circus trein</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
