@@ -12,9 +12,17 @@ namespace Circus_Trein.Console
         static void Main(string[] args)
         {
             Aanmaak aanmaak = new Aanmaak();
+            PrintFunctie printFunctie = new PrintFunctie();
+            Trein trein = new Trein();
 
             List<Dier> dieren = aanmaak.MaakDier(20, 3);
-            Trein trein = new Trein(dieren, 10);
+            List<Wagon> Wagons = trein.TreinT(dieren);
+
+            foreach (Wagon wagon in Wagons)
+            {
+                printFunctie.PrintWagon(wagon.WagonDieren, wagon.MaxGewicht, wagon.TotaalGewicht);
+            }
+
             System.Console.ReadKey();
         }
     }

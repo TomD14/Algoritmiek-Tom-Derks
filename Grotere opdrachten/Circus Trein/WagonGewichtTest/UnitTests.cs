@@ -21,17 +21,17 @@ namespace WagonGewichtTest
         }
 
         [TestMethod]
-        public void Wagon_DierToevoegen_True_2GrootteHerbivorenPassen()
+        public void Trein_DierToevoegen_True_2GrootteHerbivorenPassen()
         {
             Herbivoor dier1 = new Herbivoor(Herbivoor.Groottes.Groot);
             Herbivoor dier2 = new Herbivoor(Herbivoor.Groottes.Groot);
 
             List<Dier> dieren = new List<Dier> { dier1, dier2 };
 
-            Wagon wagon = new Wagon();
-            wagon.DierToevoegen(dieren);
+            Trein trein = new Trein(dieren);
+            trein.DierToevoegen(dieren, 10);
 
-            Assert.AreEqual(10, wagon.TotaalGewicht);
+            Assert.AreEqual(10, trein.TotaalGewicht);
         }
 
         [TestMethod]
@@ -62,7 +62,7 @@ namespace WagonGewichtTest
             Herbivoor dier2 = new Herbivoor(Dier.Groottes.Gemiddeld);
             
             List<Dier> dieren = new List<Dier> { dier1, dier2 };
-            Trein trein = new Trein(dieren, 10);
+            Trein trein = new Trein(dieren);
 
             trein.WagonLaden();
 

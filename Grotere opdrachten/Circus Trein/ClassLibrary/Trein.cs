@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Circus_trein;
 
 namespace Circus_trein
 {
@@ -10,27 +11,44 @@ namespace Circus_trein
     {
         public List<Dier> Dieren { get; set; } = new List<Dier>();
 
-        public int Totaalgewicht { get; set; }
+        public int TotaalGewicht { get; set; }
 
         public List<Wagon> Wagons { get; set; } = new List<Wagon>();
 
-        public Trein(List<Dier> dieren, int totaalgewicht)
+        public List<Wagon> TreinT(List<Dier> dieren)
         {
-            this.Totaalgewicht = totaalgewicht;
             this.Dieren = dieren;
             WagonLaden();
+            return (Wagons);
         }
 
         public void WagonLaden()
         {
-            int i = 0;
+            int x = 0;
+            int y = 0;
+            Wagons.Add(new Wagon());
 
             while(Dieren.Count != 0)
             {
-                Wagons.Add(new Wagon(Totaalgewicht));
-                Dieren = Wagons[i].DierToevoegen(Dieren);
-                i++;
+                if (y >= Dieren.Count || Wagons[x].TotaalGewicht == Wagons[x].MaxGewicht)
+                {
+                    Wagons.Add(new Wagon());
+                    x++;
+                    y = 0;
+                }
+
+                else if (Wagons[x].DierToevoeging(Dieren[y]) == true)
+                {
+                    Dieren.RemoveAt(y);
+                }
+
+                else
+                {
+                    y++;
+                }
             }
         }
+
+        
     }
 }
