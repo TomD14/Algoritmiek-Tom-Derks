@@ -28,10 +28,11 @@ namespace WagonGewichtTest
 
             List<Dier> dieren = new List<Dier> { dier1, dier2 };
 
-            Trein trein = new Trein(dieren);
-            trein.DierToevoegen(dieren, 10);
+            Trein trein = new Trein();
 
-            Assert.AreEqual(10, trein.TotaalGewicht);
+            trein.TreinCreatie(dieren);
+            
+            Assert.AreEqual(10, trein.Wagons[0].TotaalGewicht);
         }
 
         [TestMethod]
@@ -62,7 +63,7 @@ namespace WagonGewichtTest
             Herbivoor dier2 = new Herbivoor(Dier.Groottes.Gemiddeld);
             
             List<Dier> dieren = new List<Dier> { dier1, dier2 };
-            Trein trein = new Trein(dieren);
+            Trein trein = new Trein();
 
             trein.WagonLaden();
 

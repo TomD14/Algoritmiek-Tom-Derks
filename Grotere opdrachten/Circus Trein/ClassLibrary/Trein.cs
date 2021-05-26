@@ -15,7 +15,7 @@ namespace Circus_trein
 
         public List<Wagon> Wagons { get; set; } = new List<Wagon>();
 
-        public List<Wagon> TreinT(List<Dier> dieren)
+        public List<Wagon> TreinCreatie(List<Dier> dieren)
         {
             this.Dieren = dieren;
             WagonLaden();

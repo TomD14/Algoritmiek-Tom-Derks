@@ -16,7 +16,7 @@ namespace Circus_Trein.Console
             Trein trein = new Trein();
 
             List<Dier> dieren = aanmaak.MaakDier(20, 3);
-            List<Wagon> Wagons = trein.TreinT(dieren);
+            List<Wagon> Wagons = trein.TreinCreatie(dieren);
 
             foreach (Wagon wagon in Wagons)
             {
