@@ -26,3 +26,6 @@ Sprint 3:
 
 Sprint 4: 
 -Circus Trein unit tests, Fatsoenlijk bug loos werkend gemaakt en gesplitst in library en console applicatie.
+
+Sprint 5:
+-Circus trein wagon en trein splitsing, program console gesplitst van de library.
