@@ -13,7 +13,7 @@ namespace Circus_trein
 
         public int TotaalGewicht { get; set; }
 
-        public int MaxGewicht = 10;
+        public readonly int MaxGewicht = 10;
 
         public bool DierToevoeging(Dier dier)
         {

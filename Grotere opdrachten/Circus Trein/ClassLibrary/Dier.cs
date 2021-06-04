@@ -74,14 +74,11 @@ namespace Circus_trein
             {
                 if (anderDier != this)
                 {
-                    if (anderDier.Dieet == DieetSoorten.Herbivoor && this.Dieet == DieetSoorten.Carnivoor ||
-                        anderDier.Dieet == DieetSoorten.Herbivoor && this.Dieet == DieetSoorten.Herbivoor)
+                    if (anderDier.Dieet == DieetSoorten.Herbivoor)
                     {
                         return false;
                     }
-                    else if (anderDier.Dieet == DieetSoorten.Carnivoor && this.Dieet == DieetSoorten.Herbivoor && anderDier.Gewicht >= this.Gewicht ||
-                        anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht >= this.Gewicht && this.Dieet == DieetSoorten.Carnivoor ||
-                        anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht == this.Gewicht)
+                    else if (anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht >= this.Gewicht)
                     {
                         return true;
                     }
