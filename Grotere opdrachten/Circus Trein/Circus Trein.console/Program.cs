@@ -15,7 +15,7 @@ namespace Circus_Trein.Console
             PrintFunctie printFunctie = new PrintFunctie();
             Trein trein = new Trein();
 
-            List<Dier> dieren = aanmaak.MaakDier(20, 7);
+            List<Dier> dieren = aanmaak.MaakDier(20, 2);
             List<Wagon> Wagons = trein.TreinCreatie(dieren);
 
             foreach (Wagon wagon in Wagons)
