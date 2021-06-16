@@ -42,52 +42,5 @@ namespace Circus_trein
         {
             return $"Animal values = (Size: {Grootte}, Diet: {Dieet})";
         }
-
-        //public bool EetAnderen(IEnumerable<Dier> andereDieren)
-        //{
-        //    if (andereDieren == null || this.Dieet == DieetSoorten.Herbivoor)
-        //    {
-        //        return false;
-        //    }
-
-        //    foreach (Dier anderDier in andereDieren)
-        //    {
-        //        if (anderDier != this)
-        //        {
-        //            if (anderDier.Dieet == DieetSoorten.Herbivoor && anderDier.Gewicht <= this.Gewicht ||
-        //                anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht <= this.Gewicht)
-        //            {
-        //                return true;
-        //            }
-        //        }
-        //    }
-            
-        //    return false;
-        //}
-
-        //public bool WordGegeten(IEnumerable<Dier> andereDieren)
-        //{
-        //    if (andereDieren == null)
-        //    {
-        //        return false;
-        //    }
-
-        //    foreach (Dier anderDier in andereDieren)
-        //    {
-        //        if (anderDier != this)
-        //        {
-        //            if (anderDier.Dieet == DieetSoorten.Herbivoor)
-        //            {
-        //                return false;
-        //            }
-        //            else if (anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht >= this.Gewicht)
-        //            {
-        //                return true;
-        //            }
-        //        }
-        //    }
-
-        //    return false;
-        //}
     }
 }

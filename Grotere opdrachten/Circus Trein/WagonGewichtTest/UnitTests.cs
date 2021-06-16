@@ -8,19 +8,6 @@ namespace WagonGewichtTest
     public class UnitTest1
     {
         [TestMethod]
-
-        public void Dier_Wordggegeten_True_HerbivoorWordGegeten()
-        {
-            Herbivoor dierH = new Herbivoor(Herbivoor.Groottes.Gemiddeld);
-            Carnivoor dierC = new Carnivoor(Carnivoor.Groottes.Gemiddeld);
-            List<Dier> anderDier = new List<Dier> { dierC };
-
-            var result = dierH.WordGegeten(anderDier);
-
-            Assert.IsTrue(result);
-        }
-
-        [TestMethod]
         public void Trein_DierToevoegen_True_2GrootteHerbivorenPassen()
         {
             Herbivoor dier1 = new Herbivoor(Herbivoor.Groottes.Groot);
@@ -52,7 +39,7 @@ namespace WagonGewichtTest
 
             List<Dier> anderDier = new List<Dier> { dierH };
 
-            var result = dierC.EetAnderen(anderDier);
+            var result = dierC.EetAnderen(dierH);
             Assert.IsTrue(result);
         }
 
