@@ -12,5 +12,20 @@ namespace Circus_trein
         {
             Dieet = DieetSoorten.Carnivoor;
         }
+
+        public override bool EetAnderen(Dier anderDier)
+        {
+                    if (this.EetAnder(anderDier) || anderDier.EetAnderen(this))
+                    {
+                        return true;
+                    }           
+ 
+            return false;
+        }
+
+        private bool EetAnder(Dier d)
+        {
+            return d.Gewicht <= this.Gewicht;
+        }
     }
 }

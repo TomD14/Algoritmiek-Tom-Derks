@@ -15,18 +15,34 @@ namespace Circus_trein
 
         public readonly int MaxGewicht = 10;
 
-        public bool DierToevoeging(Dier dier)
+        public bool DierToevoeging(Dier toevoegDier)
         {
-            if (!dier.WordGegeten(WagonDieren) && !dier.EetAnderen(WagonDieren) && TotaalGewicht + dier.Gewicht <= MaxGewicht)
+            if (WagonDieren.Count >= 1)
             {
-                WagonDieren.Add(dier);
-                TotaalGewicht += dier.Gewicht;
+
+                foreach (Dier dieren in WagonDieren)
+                {
+                    if (dieren.EetAnderen(toevoegDier) != true && toevoegDier.EetAnderen(dieren) != true && toevoegDier.Gewicht + TotaalGewicht <= MaxGewicht)
+                    {
+                        WagonDieren.Add(toevoegDier);
+                        TotaalGewicht += toevoegDier.Gewicht;
+                        return true;
+                    }
+                    else
+                    {
+                        return false;
+                    }
+                }
+
+            }
+            else if(WagonDieren.Count == 0)
+            {
+                WagonDieren.Add(toevoegDier);
+                TotaalGewicht += toevoegDier.Gewicht;
                 return true;
             }
-            else
-            {
-                return false;
-            }
+            return false;
+
         }
     }
 }

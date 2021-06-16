@@ -12,5 +12,10 @@ namespace Circus_trein
         {
             Dieet = DieetSoorten.Herbivoor;
         }
+
+        public override bool EetAnderen(Dier dier)
+        {
+            return false;
+        }
     }
 }

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Circus_trein
 {
-    public class Dier : IEdible
+    public abstract class Dier
     {
         public Groottes Grootte { get; set; }
         public enum Groottes{Klein,Gemiddeld,Groot};
@@ -36,56 +36,58 @@ namespace Circus_trein
             }
         }
 
+        public abstract bool EetAnderen(Dier anderDier);
+
         public override string ToString()
         {
             return $"Animal values = (Size: {Grootte}, Diet: {Dieet})";
         }
 
-        public bool EetAnderen(IEnumerable<Dier> andereDieren)
-        {
-            if (andereDieren == null || this.Dieet == DieetSoorten.Herbivoor)
-            {
-                return false;
-            }
+        //public bool EetAnderen(IEnumerable<Dier> andereDieren)
+        //{
+        //    if (andereDieren == null || this.Dieet == DieetSoorten.Herbivoor)
+        //    {
+        //        return false;
+        //    }
 
-            foreach (Dier anderDier in andereDieren)
-            {
-                if (anderDier != this)
-                {
-                    if (anderDier.Dieet == DieetSoorten.Herbivoor && anderDier.Gewicht <= this.Gewicht ||
-                        anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht <= this.Gewicht)
-                    {
-                        return true;
-                    }
-                }
-            }
+        //    foreach (Dier anderDier in andereDieren)
+        //    {
+        //        if (anderDier != this)
+        //        {
+        //            if (anderDier.Dieet == DieetSoorten.Herbivoor && anderDier.Gewicht <= this.Gewicht ||
+        //                anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht <= this.Gewicht)
+        //            {
+        //                return true;
+        //            }
+        //        }
+        //    }
             
-            return false;
-        }
+        //    return false;
+        //}
 
-        public bool WordGegeten(IEnumerable<Dier> andereDieren)
-        {
-            if (andereDieren == null)
-            {
-                return false;
-            }
+        //public bool WordGegeten(IEnumerable<Dier> andereDieren)
+        //{
+        //    if (andereDieren == null)
+        //    {
+        //        return false;
+        //    }
 
-            foreach (Dier anderDier in andereDieren)
-            {
-                if (anderDier != this)
-                {
-                    if (anderDier.Dieet == DieetSoorten.Herbivoor)
-                    {
-                        return false;
-                    }
-                    else if (anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht >= this.Gewicht)
-                    {
-                        return true;
-                    }
-                }
-            }
+        //    foreach (Dier anderDier in andereDieren)
+        //    {
+        //        if (anderDier != this)
+        //        {
+        //            if (anderDier.Dieet == DieetSoorten.Herbivoor)
+        //            {
+        //                return false;
+        //            }
+        //            else if (anderDier.Dieet == DieetSoorten.Carnivoor && anderDier.Gewicht >= this.Gewicht)
+        //            {
+        //                return true;
+        //            }
+        //        }
+        //    }
 
-            return false;
-        }
+        //    return false;
+        //}
     }
 }
