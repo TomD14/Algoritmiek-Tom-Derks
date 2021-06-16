@@ -35,13 +35,13 @@ namespace Circus_trein
                 }
 
             }
-            else if(WagonDieren.Count == 0)
+            else if (WagonDieren.Count == 0 && toevoegDier != null)
             {
                 WagonDieren.Add(toevoegDier);
                 TotaalGewicht += toevoegDier.Gewicht;
                 return true;
             }
-            return false;
+            return true;
 
         }
     }

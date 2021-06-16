@@ -37,10 +37,5 @@ namespace Circus_trein
         }
 
         public abstract bool EetAnderen(Dier anderDier);
-
-        public override string ToString()
-        {
-            return $"Animal values = (Size: {Grootte}, Diet: {Dieet})";
-        }
     }
 }

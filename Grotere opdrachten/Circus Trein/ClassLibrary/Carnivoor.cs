@@ -15,7 +15,7 @@ namespace Circus_trein
 
         public override bool EetAnderen(Dier anderDier)
         {
-                    if (this.EetAnder(anderDier) || anderDier.EetAnderen(this))
+                    if (this.EetAnder(anderDier) /*|| anderDier.EetAnderen(this)*/)
                     {
                         return true;
                     }           

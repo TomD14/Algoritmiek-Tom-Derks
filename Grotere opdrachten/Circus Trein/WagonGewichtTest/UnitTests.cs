@@ -15,9 +15,7 @@ namespace WagonGewichtTest
 
             List<Dier> dieren = new List<Dier> { dier1, dier2 };
 
-            Trein trein = new Trein();
-
-            trein.TreinCreatie(dieren);
+            Trein trein = new Trein(dieren);
             
             Assert.AreEqual(10, trein.Wagons[0].TotaalGewicht);
         }
@@ -37,8 +35,6 @@ namespace WagonGewichtTest
             Carnivoor dierC = new Carnivoor(Dier.Groottes.Groot);
             Herbivoor dierH = new Herbivoor(Dier.Groottes.Klein);
 
-            List<Dier> anderDier = new List<Dier> { dierH };
-
             var result = dierC.EetAnderen(dierH);
             Assert.IsTrue(result);
         }
@@ -50,11 +46,11 @@ namespace WagonGewichtTest
             Herbivoor dier2 = new Herbivoor(Dier.Groottes.Gemiddeld);
             
             List<Dier> dieren = new List<Dier> { dier1, dier2 };
-            Trein trein = new Trein();
+            Trein trein = new Trein(dieren);
 
             trein.WagonLaden();
 
-            Assert.AreEqual(1, trein.Wagons.Count);
+            Assert.AreEqual(2, trein.Wagons[0].WagonDieren.Count);
         }
     }
 }

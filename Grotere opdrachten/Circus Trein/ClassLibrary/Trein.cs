@@ -15,11 +15,11 @@ namespace Circus_trein
 
         public List<Wagon> Wagons { get; set; } = new List<Wagon>();
 
-        public List<Wagon> TreinCreatie(List<Dier> dieren)
+        public Trein(List<Dier> dieren)
         {
-            this.Dieren = dieren;
+            var sortedDieren = dieren.OrderByDescending(d => d.Gewicht).OrderByDescending(d => d.Dieet == Dier.DieetSoorten.Carnivoor).ToList();
+            this.Dieren = sortedDieren;
             WagonLaden();
-            return (Wagons);
         }
 
         public void WagonLaden()
