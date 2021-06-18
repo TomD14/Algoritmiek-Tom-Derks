@@ -29,3 +29,7 @@ Sprint 4:
 
 Sprint 5:
 -Circus trein wagon en trein splitsing, program console gesplitst van de library.
+
+Sprint 6:
+-Wordgegeten weggehaald en gebruik gemaakt van abstraction om deze functie te vervangen door een functie, ook mijn dieren
+gesorteerd op grootte en op dieet.
